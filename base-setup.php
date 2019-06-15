@@ -27,8 +27,9 @@ add_filter('gutenberg_can_edit_post_type', function( $can_edit, $post_type ) {
  */
 add_action('init', function() {
     // No need to access or edit files directly from the dasboard
-    if( ! defined( 'DISALLOW_FILE_EDIT' ) )
-        define( 'DISALLOW_FILE_EDIT', true );
+    if(! defined( 'DISALLOW_FILE_EDIT' ) ) {
+    	define( 'DISALLOW_FILE_EDIT', true );
+    }
 });
 
 /**
@@ -64,6 +65,10 @@ add_action( 'admin_init', function() {
     remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
     remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
     remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');
+
+	add_action('admin_head', function() {
+    	echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>';
+    });
 });
 
 /**
@@ -77,7 +82,7 @@ add_action('after_setup_theme', function () {
     add_theme_support('soil-relative-urls');
     add_theme_support('soil-js-to-footer');
     add_theme_support('soil-google-analytics', 'UA-142130107-1');
-    add_theme_support('soil-jquery-cdn');
+    // add_theme_support('soil-jquery-cdn');
     add_theme_support('soil-disable-asset-versioning');
     add_theme_support('soil-disable-trackbacks');
     add_theme_support('soil-nav-walker');
