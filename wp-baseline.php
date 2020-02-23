@@ -35,12 +35,12 @@ if (! defined('WP_BASELINE_TEXT_DOMAIN')) {
 if (file_exists(WP_BASELINE_AUTOLOADER)) {
 	if (require WP_BASELINE_AUTOLOADER) {
 
-		$bootstrapWpBaseline = once(function () {
+		$wpBaseline = once(function () {
 			return new Bootstrap();
 		});
 
-		if (! $bootstrapWpBaseline->modulesLoaded) {
-			$bootstrapWpBaseline->loadModules();
+		if (! $wpBaseline->modulesLoaded) {
+			$wpBaseline->loadModules();
 		}
 
 	}
