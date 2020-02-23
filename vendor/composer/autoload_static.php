@@ -11,22 +11,22 @@ class ComposerStaticInit704dcdcbf60393b6378153dc20e87c2f
     );
 
     public static $prefixLengthsPsr4 = array (
-        'S' =>
+        'S' => 
         array (
             'Spatie\\Once\\' => 12,
         ),
-        'R' =>
+        'R' => 
         array (
             'RunyanCo\\WpBaseline\\' => 20,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Spatie\\Once\\' =>
+        'Spatie\\Once\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/once/src',
         ),
-        'RunyanCo\\WpBaseline\\' =>
+        'RunyanCo\\WpBaseline\\' => 
         array (
             0 => __DIR__ . '/../..' . '/',
         ),
@@ -45,7 +45,7 @@ class ComposerStaticInit704dcdcbf60393b6378153dc20e87c2f
         'RunyanCo\\WpBaseline\\Modules\\RebuildNavWalker' => __DIR__ . '/../..' . '/app/Modules/RebuildNavWalker.php',
         'RunyanCo\\WpBaseline\\Modules\\SecurityImprovements' => __DIR__ . '/../..' . '/app/Modules/SecurityImprovements.php',
         'RunyanCo\\WpBaseline\\Modules\\TransformUrlsToRelative' => __DIR__ . '/../..' . '/app/Modules/TransformUrlsToRelative.php',
-        'RunyanCo\\WpBaseline\\Utilities' => __DIR__ . '/../..',
+        'RunyanCo\\WpBaseline\\Utilities' => __DIR__ . '/../..' . '/app/Utilities.php',
         'Spatie\\Once\\Backtrace' => __DIR__ . '/..' . '/spatie/once/src/Backtrace.php',
         'Spatie\\Once\\Cache' => __DIR__ . '/..' . '/spatie/once/src/Cache.php',
         'Spatie\\Once\\Listener' => __DIR__ . '/..' . '/spatie/once/src/Listener.php',

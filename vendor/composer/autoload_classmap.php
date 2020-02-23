@@ -18,7 +18,7 @@ return array(
     'RunyanCo\\WpBaseline\\Modules\\RebuildNavWalker' => $baseDir . '/app/Modules/RebuildNavWalker.php',
     'RunyanCo\\WpBaseline\\Modules\\SecurityImprovements' => $baseDir . '/app/Modules/SecurityImprovements.php',
     'RunyanCo\\WpBaseline\\Modules\\TransformUrlsToRelative' => $baseDir . '/app/Modules/TransformUrlsToRelative.php',
-    'RunyanCo\\WpBaseline\\Utilities' => $baseDir . '/Utilities.php',
+    'RunyanCo\\WpBaseline\\Utilities' => $baseDir . '/app/Utilities.php',
     'Spatie\\Once\\Backtrace' => $vendorDir . '/spatie/once/src/Backtrace.php',
     'Spatie\\Once\\Cache' => $vendorDir . '/spatie/once/src/Cache.php',
     'Spatie\\Once\\Listener' => $vendorDir . '/spatie/once/src/Listener.php',

@@ -33,44 +33,36 @@ class Bootstrap
 	 */
 	public function __construct()
 	{
-		if (! $this->modulesLoaded) {
+		$this->modules = [
 
-			$this->modules = [
+			new CleanUp(),
+			new DisableGutenburgEditor(),
+			new SecurityImprovements(),
+			new DisableRestApi(),
+			new MoveJsToFooter(),
+			new RebuildNavWalker(),
+			new DisableTrackbacks(),
+			new CleanUpSearch(),
+			new TransformUrlsToRelative(),
 
-				new CleanUp(),
-				new DisableGutenburgEditor(),
-				new SecurityImprovements(),
-				new DisableRestApi(),
-				new MoveJsToFooter(),
-				new RebuildNavWalker(),
-				new DisableTrackbacks(),
-				new CleanUpSearch(),
-				new TransformUrlsToRelative(),
-
-			];
-
-			$this->modulesLoaded = true;
-		}
+		];
 	}
 
 	/**
+	 * Load in the modules
+	 *
 	 * @return void
 	 */
 	public function loadModules()
 	{
-		foreach ($this->modules as $module)  {
-			$module->load();
-		}
+		if (! $this->modulesLoaded) {
 
-		register_activation_hook(__FILE__, function () {
-			foreach($this->modules as $module) {
-				$module->addAdminNotice('success', $module->getName() . ' Module Loaded');
+			foreach ($this->modules as $module)  {
+				$module->load();
 			}
-		});
 
-		register_deactivation_hook(__FILE__, function () {
-			$this->addAdminNotice('info', 'Bye!');
-		});
+			$this->modulesLoaded = true;
+		}
 	}
 
 }
