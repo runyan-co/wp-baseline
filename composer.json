@@ -1,0 +1,23 @@
+{
+    "name": "runyan-co/wp-baseline",
+    "description": "A simple WordPress plugin to remove unneeded elements and perform a few other tweaks",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Runyan",
+            "email": "alex@runyan.co"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "spatie/once": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "RunyanCo\\WpBaseline\\": "./"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
