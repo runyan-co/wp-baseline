@@ -6,5 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'fd0b78c396f426ac2811755a91677804' => $vendorDir . '/humanmade/wp-redis-predis-client/functions.php',
     'ed33d19cba977f2a7e321f120d94a872' => $vendorDir . '/spatie/once/src/functions.php',
+    '0935399d376f2f008fbd2bc63976b85d' => $vendorDir . '/humanmade/wp-redis-predis-client/functions.php',
 );

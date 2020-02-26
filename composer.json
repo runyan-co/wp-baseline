@@ -2,6 +2,14 @@
     "name": "runyan-co/wp-baseline",
     "description": "A simple WordPress plugin to remove unneeded elements and perform a few other tweaks",
     "license": "MIT",
+    "scripts": {
+        "publish-object-cache": [
+            "cp vendor/humanmade/wp-redis-predis-client/object-cache.php ../../mu-plugins/object-cache.php"
+        ],
+        "post-autoload-dump": [
+            "rm ./wp-baseline.zip && zip -r wp-baseline.zip ./*"
+        ]
+    },
     "authors": [
         {
             "name": "Alex Runyan",
@@ -10,12 +18,17 @@
     ],
     "require": {
         "php": "^7.2",
-        "spatie/once": "^2.2"
+        "spatie/once": "^2.2",
+        "predis/predis": "^1.1",
+        "humanmade/wp-redis-predis-client": "^0.1.0"
     },
     "autoload": {
         "psr-4": {
             "RunyanCo\\WpBaseline\\": "./"
-        }
+        },
+        "files": [
+            "vendor/humanmade/wp-redis-predis-client/functions.php"
+        ]
     },
     "config": {
         "optimize-autoloader": true

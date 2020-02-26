@@ -8,4 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'Spatie\\Once\\' => array($vendorDir . '/spatie/once/src'),
     'RunyanCo\\WpBaseline\\' => array($baseDir . '/'),
+    'Predis\\' => array($vendorDir . '/predis/predis/src'),
 );
